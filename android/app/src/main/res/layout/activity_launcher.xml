@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:gravity="center_horizontal"
+      android:padding="24dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TCL RN Bundle Runner"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:paddingBottom="16dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_bg_light"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="6dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/card_stroke"
+        app:contentPadding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bundle Info"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:paddingBottom="8dp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <TextView
+                    android:id="@+id/bundle_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No bundle installed"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:typeface="monospace"
+                    android:lineSpacingExtra="2dp"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"/>
+            </ScrollView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="16dp" />
+
+    <Button
+        android:id="@+id/pick_zip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Bundle ZIP and Replace"
+        android:backgroundTint="@color/accent_blue"
+        android:textColor="@android:color/white"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="16dp" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Panel"
+        android:backgroundTint="@color/accent_blue"
+        android:textColor="@android:color/white"/>
+
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
